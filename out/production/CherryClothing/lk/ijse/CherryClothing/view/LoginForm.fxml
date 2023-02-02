@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancLogin" prefHeight="1000.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.CherryClothing.Controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="1000.0" fitWidth="1400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/Group%201.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtUser" layoutX="820.0" layoutY="442.0" prefHeight="44.0" prefWidth="489.0" promptText="UserName" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtPassword" layoutX="823.0" layoutY="523.0" onAction="#OnActiontxtPassword" prefHeight="44.0" prefWidth="489.0" promptText="Password" unFocusColor="BLACK" />
+      <Label fx:id="lblforgot" layoutX="777.0" layoutY="581.0" text="Forgot Password?" textFill="#d43883">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="981.0" layoutY="623.0" onAction="#OnActionLogin" style="-fx-background-radius: 22; -fx-background-insets: 000000;" text="Login" textFill="#d43883">
+         <font>
+            <Font name="Bookman Old Style" size="41.0" />
+         </font>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#a43f70" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+      </JFXButton>
+   </children>
+</AnchorPane>
