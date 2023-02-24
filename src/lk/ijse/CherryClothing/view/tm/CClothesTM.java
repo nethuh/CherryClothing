@@ -15,8 +15,6 @@ public class CClothesTM implements Comparable<CClothesTM>{
         this.qtyOnHand = qtyOnHand;
     }
 
-    //public CClothesTM(String id, String type, int qtyOnHand, double unitPrice) {
-    //}
 
     public String getId() {
         return id;

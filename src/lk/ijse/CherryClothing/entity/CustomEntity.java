@@ -25,15 +25,22 @@ public class CustomEntity {
     private LocalDate orderDate;
     private String customerId;
 
+   //Employee
+    private Double salary;
+
+    //Supplier
+    private String supId;
 
 
-    public CustomEntity(String oid, LocalDate date, String customerID, String itemCode, int qty, double unitPrice) {
+    public CustomEntity(String oid, LocalDate date, String customerID, String itemCode, int qty, double unitPrice ,double salary,String supId) {
         this.unitPrice = unitPrice;
         this.oid = oid;
         this.orderDate = date;
         this.customerId = customerID;
         this.itemCode = itemCode;
         this.qty = qty;
+        this.salary = salary;
+        this.supId = supId;
     }
 
     public String getId() {
@@ -122,6 +129,22 @@ public class CustomEntity {
 
     public void setQty(int qty) {
         this.qty = qty;
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
+    }
+
+    public String getSupId() {
+        return supId;
+    }
+
+    public void setSupId(String supId) {
+        this.supId = supId;
     }
 }
 

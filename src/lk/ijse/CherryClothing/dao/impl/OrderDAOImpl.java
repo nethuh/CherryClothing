@@ -1,6 +1,7 @@
 package lk.ijse.CherryClothing.dao.impl;
 
 import lk.ijse.CherryClothing.dao.custom.OrderDAO;
+import lk.ijse.CherryClothing.entity.Customer;
 import lk.ijse.CherryClothing.entity.Order;
 import lk.ijse.CherryClothing.util.CrudUtil;
 
@@ -13,7 +14,15 @@ public class OrderDAOImpl implements OrderDAO {
 
     @Override
     public ArrayList<Order> getAll() throws SQLException, ClassNotFoundException {
-        return null;
+        ArrayList<Order> allCustomers = new ArrayList<>();
+
+        ResultSet rst = CrudUtil.execute("SELECT * FROM Orders");
+
+        while (rst.next()) {
+            Order order = new Order(rst.getString("order_id"), rst.getDate("date"), rst.getString("cus_id"));
+            allCustomers.add(order);
+        }
+        return allCustomers;
     }
 
     @Override

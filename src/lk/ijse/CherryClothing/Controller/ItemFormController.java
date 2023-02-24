@@ -269,5 +269,13 @@ public void OnActionCClothes(ActionEvent actionEvent) throws IOException {
 
     public void OnActionSearch(ActionEvent actionEvent) {
     }
+
+    public void OnActionEmployee(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.EMPLOYEE, ancCClothes);
+    }
+
+    public void OnActionSuplier(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.SUPPLIER, ancCClothes);
+    }
 }
 

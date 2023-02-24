@@ -1,5 +1,6 @@
 package lk.ijse.CherryClothing.entity;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 public class Order {
@@ -15,6 +16,9 @@ public class Order {
         this.date = date;
         this.customerId = customerId;
 
+    }
+
+    public Order(String cus_id, Date date, String address) {
     }
 
     public String getOrderId() {

@@ -1,10 +1,6 @@
 package lk.ijse.CherryClothing.dao;
 
-import lk.ijse.CherryClothing.dao.custom.ItemDAO;
-import lk.ijse.CherryClothing.dao.impl.CustomerDAOImpl;
-import lk.ijse.CherryClothing.dao.impl.ItemDAOImpl;
-import lk.ijse.CherryClothing.dao.impl.OrderDAOImpl;
-import lk.ijse.CherryClothing.dao.impl.OrderDetailDAOImpl;
+import lk.ijse.CherryClothing.dao.impl.*;
 
 public class DAOFactory {
     private static DAOFactory daoFactory;
@@ -17,7 +13,7 @@ public class DAOFactory {
     }
 
     public enum DAOTypes {
-        CUSTOMER,ITEM,ORDER,ORDER_DETAILS,QUERY_DAO
+        CUSTOMER,ITEM,ORDER,ORDER_DETAILS,QUERY_DAO,EMPLOYEE,SUPPLIER
     }
 
     public SuperDAO getDAO(DAOTypes types) {
@@ -32,6 +28,10 @@ public class DAOFactory {
                 return new OrderDetailDAOImpl();
             case QUERY_DAO:
                 return new QuerryDAOImpl();
+            case EMPLOYEE:
+                return new EmployeeDAOImpl();
+            case SUPPLIER:
+                return new SupplierDAOImpl();
             default:
                 return null;
         }

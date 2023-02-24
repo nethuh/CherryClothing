@@ -21,8 +21,10 @@ public class QuerryDAOImpl implements QuerryDAO {
                 String itemCode = rst.getString("itemCode");
                 int qty = rst.getInt("qty");
                 double unitPrice = rst.getDouble("unitPrice");
+                double salary = rst.getDouble("salary");
+                String supId = rst.getString("sup_id");
 
-                CustomEntity customEntity = new CustomEntity(oid1, LocalDate.now(), customerID, itemCode, qty, unitPrice);
+                CustomEntity customEntity = new CustomEntity(oid1, LocalDate.now(), customerID, itemCode, qty, unitPrice,salary,supId);
                 allRecords.add(customEntity);
             }
             return allRecords;

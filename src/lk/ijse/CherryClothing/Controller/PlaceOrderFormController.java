@@ -11,7 +11,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import lk.ijse.CherryClothing.Model.*;
 import lk.ijse.CherryClothing.bo.BOFactory;
 import lk.ijse.CherryClothing.bo.Custom.PlaceOrderBO;
 import lk.ijse.CherryClothing.dto.*;
@@ -255,69 +254,8 @@ public class PlaceOrderFormController {
     }
 
 
-        /*try {
-            boolean register = PaymentModel.register(payment);
-            boolean register1 = DeliveryModel.register(delivery);
-            if(register && register1){
-                boolean isPlaced = PlaceOrderModel.placeOrder(placeOrder);
-                if (isPlaced) {
-                    // to clear table
-                    obList.clear();
-                    loadNextOrderId();
-                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Order Placed!");
-                    alert.setOnCloseRequest(new EventHandler<DialogEvent>() {
-                        @Override
-                        public void handle(DialogEvent event) {
-                            loadNextOrderId();
-                            loadNextDeliveryIds();
-                            loadNextPayIds();
-                            //cmbCustomerId.valueProperty().set(null);
-                            //cmbItemId.getSelectionModel().clearSelection();
-                            lblCustomerName.setText("");
-                            lblType.setText("");
-                            lblUnitPrice.setText("");
-                            lblQtyOnHand.setText("");
-
-                        }
-                    });
-                    alert.setOnHidden(new EventHandler<DialogEvent>() {
-                        @Override
-                        public void handle(DialogEvent event) {
-                            loadNextOrderId();
-                            loadNextDeliveryIds();
-                            loadNextPayIds();
-                            cmbCustomerId.getSelectionModel().clearSelection();
-                            //cmbItemId.getSelectionModel().clearSelection();
-                            lblCustomerName.setText("");
-                            lblType.setText("");
-                            lblUnitPrice.setText("");
-                            lblQtyOnHand.setText("");
-
-                        }
-                    });
-                    alert.show();
-                } else {
-                    new Alert(Alert.AlertType.ERROR, "Order Not Placed!").show();
-                }
-            }
-
-        } catch (SQLException | ClassNotFoundException e) {
-            System.out.println(e);
-        }*/
-
-
     private void loadCustomerIds() {
         try {
-            /*Connection connection = DBConnection.getDbConnection().getConnection();
-            Statement stm = connection.createStatement();
-            ResultSet rst = stm.executeQuery("SELECT * FROM Customer");
-
-            while (rst.next()) {
-                cmbCustomerId.getItems().add(rst.getString("id"));
-            }
-
-             */
-
 
             ArrayList<CustomerDTO> allCustomers = placeOrderBO.getAllCustomers();
             for (CustomerDTO c : allCustomers) {
@@ -335,15 +273,6 @@ public class PlaceOrderFormController {
 
     private void loadItemCodes() {
         try {
-            /*Get all items*/
-            /*Connection connection = DBConnection.getDbConnection().getConnection();
-            Statement stm = connection.createStatement();
-            ResultSet rst = stm.executeQuery("SELECT * FROM Item");
-            while (rst.next()) {
-                cmbItemCode.getItems().add(rst.getString("code"));
-
-             */
-
             ArrayList<ItemDTO> allItems = placeOrderBO.getAllItems();
             for (ItemDTO i : allItems) {
                 cmbItemId.getItems().add(i.getId());
@@ -357,18 +286,6 @@ public class PlaceOrderFormController {
 
 
     public void btnAddToCartOnAction(ActionEvent actionEvent) {
-       /* boolean isEnough2 = Double.parseDouble(txtQty.getText()) <= Double.parseDouble(lblQtyOnHand.getText());
-        boolean isEnough = Double.parseDouble(lblQtyOnHand.getText()) > 0;
-
-        if (!cmbCustomerId.getId().equals("") && !cmbItemId.getId().equals("")) {
-            if (isEnough && isEnough2) {
-
-            }else {
-                try {
-                    new Alert(Alert.AlertType.WARNING,"Please select enough qty").show();
-                }catch (RuntimeException e){
-                    System.out.println(e);
-                }*/
         String itemId = cmbItemId.getSelectionModel().getSelectedItem();
         String type = txtDescription.getText();
         BigDecimal unitPrice = new BigDecimal(txtUnitPrice.getText()).setScale(2);
@@ -433,6 +350,14 @@ public class PlaceOrderFormController {
     }
 
     public void txtQty_OnAction(ActionEvent actionEvent) {
+    }
+
+    public void OnActionEmployee(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.EMPLOYEE, ancPlaceOrder);
+    }
+
+    public void OnActionSuplier(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.SUPPLIER, ancPlaceOrder);
     }
 }
 

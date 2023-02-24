@@ -1,8 +1,6 @@
 package lk.ijse.CherryClothing.bo;
 
-import lk.ijse.CherryClothing.bo.Impl.CustomerBOImpl;
-import lk.ijse.CherryClothing.bo.Impl.ItemBOImpl;
-import lk.ijse.CherryClothing.bo.Impl.PlaceOrderBOImpl;
+import lk.ijse.CherryClothing.bo.Impl.*;
 
 public class BOFactory {
     private static BOFactory boFactory;
@@ -13,7 +11,7 @@ public class BOFactory {
     }
 
     public enum BOTypes{
-        CUSTOMER,ITEM,PO
+        CUSTOMER,ITEM,PO,EMPLOYEE,SUPPLIER,ORDER
     }
 
     //Object creation logic for BO objects
@@ -25,6 +23,12 @@ public class BOFactory {
                 return new ItemBOImpl();
             case PO:
                 return new PlaceOrderBOImpl();
+            case EMPLOYEE:
+                return new EmployeeBOImpl();
+            case SUPPLIER:
+                return new SupplierBOImpl();
+            case ORDER:
+                return new OrderBOImpl();
             default:
                 return null;
         }

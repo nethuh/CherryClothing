@@ -50,26 +50,6 @@
             <Image url="@../Assets/icons8-male-user-96.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="57.0" layoutY="285.0" onAction="#OnActionCDash" prefHeight="44.0" prefWidth="268.0" style="-fx-background-color: #810a44;" text="Dashboard" textFill="WHITE">
-         <font>
-            <Font name="Open Sans SemiBold" size="20.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="57.0" layoutY="410.0" onAction="#OnActionCustomer" prefHeight="44.0" prefWidth="268.0" style="-fx-background-color: #810a44;" text="Customer" textFill="WHITE">
-         <font>
-            <Font name="Open Sans SemiBold" size="20.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="57.0" layoutY="534.0" onAction="#OnActionCClothes" prefHeight="44.0" prefWidth="266.0" style="-fx-background-color: #810a44;" text="Clothes" textFill="WHITE">
-         <font>
-            <Font name="Open Sans SemiBold" size="20.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="57.0" layoutY="663.0" onAction="#OnActionPlace" prefHeight="44.0" prefWidth="264.0" style="-fx-background-color: #810a44;" text="Place Order" textFill="WHITE">
-         <font>
-            <Font name="Open Sans SemiBold" size="20.0" />
-         </font>
-      </JFXButton>
       <Label layoutX="140.0" layoutY="163.0" text="Welcome Back!" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -111,6 +91,36 @@
       <JFXButton fx:id="btnAddNew" buttonType="RAISED" layoutX="1618.0" layoutY="41.0" onAction="#btnAddNew_OnAction" prefHeight="44.0" prefWidth="249.0" style="-fx-background-color: #4CD137; -fx-background-radius: 0;" text="+Add New Customer" textFill="WHITE">
          <font>
             <Font name="Gadugi Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="58.0" layoutY="273.0" onAction="#OnActionCDash" prefHeight="44.0" prefWidth="268.0" style="-fx-background-color: #810a44;" text="Dashboard" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="58.0" layoutY="354.0" onAction="#OnActionCustomer" prefHeight="44.0" prefWidth="268.0" style="-fx-background-color: #810a44;" text="Customer" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="62.0" layoutY="682.0" onAction="#OnActionPlace" prefHeight="44.0" prefWidth="264.0" style="-fx-background-color: #810a44;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="58.0" layoutY="436.0" onAction="#OnActionCClothes" prefHeight="44.0" prefWidth="266.0" style="-fx-background-color: #810a44;" text="Clothes" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="60.0" layoutY="516.0" onAction="#OnActionEmployee" prefHeight="44.0" prefWidth="266.0" style="-fx-background-color: #810a44;" text="Employee" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="60.0" layoutY="599.0" onAction="#OnActionSuplier" prefHeight="44.0" prefWidth="264.0" style="-fx-background-color: #810a44;" text="Suplier" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
          </font>
       </JFXButton>
    </children>

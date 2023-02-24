@@ -19,8 +19,8 @@ public class LoginFormController {
 
     public void OnActionLogin(ActionEvent actionEvent) throws IOException, ClassNotFoundException, SQLException {
 
-       if (txtUser.getText().equals("Cashier") && txtPassword.getText().equals("1234")) {
-            Navigation.navigate(Routes.PLACEORDER, ancLogin);
+       if (txtUser.getText().equals("A") && txtPassword.getText().equals("1")) {
+            Navigation.navigate(Routes.CASHIER, ancLogin);
 
         } else {
 
@@ -34,8 +34,8 @@ public class LoginFormController {
 
 
     public void OnActiontxtPassword(ActionEvent actionEvent) throws IOException, SQLException, ClassNotFoundException {
-         if (txtUser.getText().equals("Cashier") && txtPassword.getText().equals("1234")) {
-            Navigation.navigate(Routes.PLACEORDER, ancLogin);
+         if (txtUser.getText().equals("A") && txtPassword.getText().equals("1")) {
+            Navigation.navigate(Routes.CASHIER, ancLogin);
 
         } else {
 

@@ -1,5 +1,5 @@
 package lk.ijse.CherryClothing.util;
 
 public enum Routes {
-    LOGIN, CASHIER, CUSTOMER , PLACEORDER , CCLOTHES
+    LOGIN, CASHIER, CUSTOMER , PLACEORDER , CCLOTHES , EMPLOYEE , SUPPLIER
 }

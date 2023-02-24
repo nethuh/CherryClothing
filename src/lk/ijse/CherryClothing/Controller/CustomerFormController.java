@@ -28,7 +28,6 @@ import java.util.List;
 
 public class CustomerFormController {
     public AnchorPane ancCustomer;
-
     public JFXTextField txtContact;
     public JFXTextField txtID;
     public JFXTextField txtAddress;
@@ -255,20 +254,6 @@ public class CustomerFormController {
             Navigation.navigate(Routes.CASHIER, ancCustomer);
         }
 
-       /* public void txtCustomerIdOnAction (ActionEvent actionEvent){
-            String CusID = txtID.getText();
-            try {
-                CustomerDTO customerDTO = CustomerModel.search(CusID);
-                if (customerDTO != null) {
-                    fillData(customerDTO);
-                }
-            } catch (SQLException | ClassNotFoundException e) {
-                System.out.println(e);
-            }
-        }
-
-        */
-
 
         public void mobileK (KeyEvent keyEvent){
             if (RegexUtil.regex(txtContact.getText(), "0((11)|(7(7|0|8|4|9|1|[3-7]))|(3[1-8])|(4(1|5|7))|(5(1|2|4|5|7))|(6(3|[5-7]))|([8-9]1))[0-9]{7}")) {
@@ -346,6 +331,14 @@ public class CustomerFormController {
     }
 
     public void txtCustomerIdOnAction(ActionEvent actionEvent) {
+    }
+
+    public void OnActionEmployee(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.EMPLOYEE, ancCustomer);
+    }
+
+    public void OnActionSuplier(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.SUPPLIER, ancCustomer);
     }
 }
 

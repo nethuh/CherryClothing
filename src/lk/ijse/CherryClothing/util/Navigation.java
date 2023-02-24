@@ -36,6 +36,14 @@ public class Navigation {
                 window.setTitle("Cashier Clothes Form");
                 initUI("ItemForm.fxml");
                 break;
+            case EMPLOYEE:
+                window.setTitle("Employee Form");
+                initUI("EmployeeForm.fxml");
+                break;
+            case SUPPLIER:
+                window.setTitle("Suplier Form");
+                initUI("SuplierForm.fxml");
+                break;
             default:
                 new Alert(Alert.AlertType.ERROR, "Not suitable UI found!").show();
         }

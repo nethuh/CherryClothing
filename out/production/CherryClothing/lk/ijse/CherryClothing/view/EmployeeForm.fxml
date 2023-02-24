@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancDeliver" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.CherryClothing.Controller.EmployeeFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#252527" height="1090.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="376.0" />
+      <JFXButton layoutX="48.0" layoutY="263.0" onAction="#OnActionCDash" prefHeight="44.0" prefWidth="268.0" style="-fx-background-color: #810a44;" text="Dashboard" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="48.0" layoutY="344.0" onAction="#OnActionCustomer" prefHeight="44.0" prefWidth="268.0" style="-fx-background-color: #810a44;" text="Customer" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="52.0" layoutY="672.0" onAction="#OnActionPlace" prefHeight="44.0" prefWidth="264.0" style="-fx-background-color: #810a44;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="115.0" layoutY="138.0" text="Welcome Back!" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="7.0" layoutY="985.0" onAction="#OnActionOut" prefHeight="74.0" prefWidth="371.0" style="-fx-background-color: #2c3e50;" text="LogOut" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="48.0" layoutY="426.0" onAction="#OnActionCClothes" prefHeight="44.0" prefWidth="266.0" style="-fx-background-color: #810a44;" text="Clothes" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblEmp" layoutX="511.0" layoutY="450.0" prefHeight="509.0" prefWidth="1229.0">
+        <columns>
+          <TableColumn fx:id="ColEmp" prefWidth="192.33331298828125" text="Employee ID" />
+          <TableColumn fx:id="ColName" prefWidth="303.33331298828125" text="Name" />
+            <TableColumn fx:id="ColAddress" prefWidth="405.66668701171875" text="Address" />
+            <TableColumn fx:id="ColSalary" prefWidth="326.3333740234375" text="Salary" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnAddNew" buttonType="RAISED" layoutX="1615.0" layoutY="34.0" onAction="#OnActionAddNew" prefHeight="50.0" prefWidth="267.0" style="-fx-background-color: #4CD137; -fx-background-radius: 0;" text="+Add  New" textFill="WHITE">
+         <font>
+            <Font name="Gadugi Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="50.0" layoutY="506.0" onAction="#OnActionEmployee" prefHeight="44.0" prefWidth="266.0" style="-fx-background-color: #810a44;" text="Employee" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="50.0" layoutY="589.0" onAction="#OnActionSuplier" prefHeight="44.0" prefWidth="264.0" style="-fx-background-color: #810a44;" text="Suplier" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView layoutX="125.0" layoutY="30.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Assets/icons8-male-user-96.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtId" layoutX="677.0" layoutY="41.0" prefHeight="47.0" prefWidth="461.0" unFocusColor="BLACK">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" layoutX="712.0" layoutY="107.0" onKeyReleased="#nameK" prefHeight="47.0" prefWidth="461.0" unFocusColor="BLACK">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" layoutX="741.0" layoutY="171.0" onKeyReleased="#addressK" prefHeight="47.0" prefWidth="461.0" unFocusColor="BLACK">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSalary" layoutX="723.0" layoutY="235.0" onKeyReleased="#salaryK" prefHeight="47.0" prefWidth="461.0" unFocusColor="BLACK">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="593.0" layoutY="330.0" onAction="#OnActionAdd" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: #2A3B4C; -fx-background-radius: 0;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Gadugi Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="831.0" layoutY="331.0" onAction="#OnActionDelete" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: F23C41; -fx-background-radius: 0;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Gadugi Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="478.0" layoutY="55.0" text="Employee ID :">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="476.0" layoutY="187.0" text="Employee Address :">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="477.0" layoutY="119.0" text="Employee Name :">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="483.0" layoutY="247.0" text="Employee Salary :">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

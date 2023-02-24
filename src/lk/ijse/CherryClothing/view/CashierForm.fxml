@@ -2,6 +2,8 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,26 +18,6 @@
             <Image url="@../Assets/icons8-male-user-96.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="54.0" layoutY="275.0" onAction="#OnActionCDash" prefHeight="44.0" prefWidth="268.0" style="-fx-background-color: #810a44;" text="Dashboard" textFill="WHITE">
-         <font>
-            <Font name="Open Sans SemiBold" size="20.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="54.0" layoutY="402.0" onAction="#OnActionCustomer" prefHeight="44.0" prefWidth="268.0" style="-fx-background-color: #810a44;" text="Customer" textFill="WHITE">
-         <font>
-            <Font name="Open Sans SemiBold" size="20.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="54.0" layoutY="522.0" onAction="#OnActionCClothes" prefHeight="44.0" prefWidth="266.0" style="-fx-background-color: #810a44;" text="Clothes" textFill="WHITE">
-         <font>
-            <Font name="Open Sans SemiBold" size="20.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="54.0" layoutY="640.0" onAction="#OnActionPlace" prefHeight="44.0" prefWidth="264.0" style="-fx-background-color: #810a44;" text="Place Order" textFill="WHITE">
-         <font>
-            <Font name="Open Sans SemiBold" size="20.0" />
-         </font>
-      </JFXButton>
       <Label layoutX="135.0" layoutY="153.0" text="Welcome Back!" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -46,5 +28,50 @@
             <Font name="System Bold" size="19.0" />
          </font>
       </JFXButton>
+      <JFXButton layoutX="58.0" layoutY="273.0" onAction="#OnActionCDash" prefHeight="44.0" prefWidth="268.0" style="-fx-background-color: #810a44;" text="Dashboard" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="58.0" layoutY="354.0" onAction="#OnActionCustomer" prefHeight="44.0" prefWidth="268.0" style="-fx-background-color: #810a44;" text="Customer" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="62.0" layoutY="682.0" onAction="#OnActionPlace" prefHeight="44.0" prefWidth="264.0" style="-fx-background-color: #810a44;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="58.0" layoutY="436.0" onAction="#OnActionCClothes" prefHeight="44.0" prefWidth="266.0" style="-fx-background-color: #810a44;" text="Clothes" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="60.0" layoutY="516.0" onAction="#OnActionEmployee" prefHeight="44.0" prefWidth="266.0" style="-fx-background-color: #810a44;" text="Employee" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="60.0" layoutY="599.0" onAction="#OnActionSuplier" prefHeight="44.0" prefWidth="264.0" style="-fx-background-color: #810a44;" text="Suplier" textFill="WHITE">
+         <font>
+            <Font name="Open Sans SemiBold" size="20.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblOrder" layoutX="450.0" layoutY="279.0" prefHeight="664.0" prefWidth="602.0">
+        <columns>
+          <TableColumn fx:id="colOoId" prefWidth="185.0" text="Order Id" />
+          <TableColumn fx:id="colDate" prefWidth="155.0" text="Date" />
+            <TableColumn fx:id="ColCusId" prefWidth="261.0" text="Customer Id" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblOrderDetail" layoutX="1150.0" layoutY="276.0" prefHeight="662.0" prefWidth="684.0">
+         <columns>
+            <TableColumn fx:id="colOId" prefWidth="177.0" text="Order Id" />
+            <TableColumn fx:id="ColItemId" prefWidth="157.0" text="Item Id" />
+            <TableColumn fx:id="colQty" prefWidth="139.0" text="Qty_On_Hand" />
+            <TableColumn fx:id="colPrice" prefWidth="210.0" text="Unit Price" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>

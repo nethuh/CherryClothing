@@ -6,36 +6,62 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ancLogin" prefHeight="1000.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.CherryClothing.Controller.LoginFormController">
+<AnchorPane fx:id="ancLogin" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.CherryClothing.Controller.LoginFormController">
    <children>
-      <ImageView fitHeight="1000.0" fitWidth="1400.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true">
          <image>
-            <Image url="@../Assets/Group%201.jpg" />
+            <Image url="@../Assets/a21961e5a23d140e6b53207153fa2da0.jpg" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtUser" layoutX="820.0" layoutY="442.0" prefHeight="44.0" prefWidth="489.0" promptText="UserName" unFocusColor="BLACK" />
-      <JFXTextField fx:id="txtPassword" layoutX="823.0" layoutY="523.0" onAction="#OnActiontxtPassword" prefHeight="44.0" prefWidth="489.0" promptText="Password" unFocusColor="BLACK" />
-      <Label fx:id="lblforgot" layoutX="777.0" layoutY="581.0" text="Forgot Password?" textFill="#d43883">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000076" height="1080.0" layoutX="-7.0" layoutY="1.0" smooth="false" stroke="BLACK" strokeType="INSIDE" width="1935.0" />
+      <Label layoutX="1351.0" layoutY="1044.0" text="2023 Clothing login form.All right reserved | Desing by Nethu Hewage" textFill="#f2f2f2">
          <font>
-            <Font size="17.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="981.0" layoutY="623.0" onAction="#OnActionLogin" style="-fx-background-radius: 22; -fx-background-insets: 000000;" text="Login" textFill="#d43883">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000b4" height="454.0" layoutX="751.0" layoutY="282.0" smooth="false" stroke="BLACK" strokeType="INSIDE" width="560.0" />
+      <JFXTextField fx:id="txtPassword" focusColor="WHITE" labelFloat="true" layoutX="813.0" layoutY="504.0" onAction="#OnActiontxtPassword" prefHeight="44.0" prefWidth="415.0" promptText="Password" style="-fx-background-color: FFFFFF;" unFocusColor="BLACK">
          <font>
-            <Font name="Bookman Old Style" size="41.0" />
+            <Font name="Arial Rounded MT Bold" size="18.0" />
          </font>
-         <ripplerFill>
-            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-               <stops>
-                  <Stop color="#a43f70" />
-                  <Stop color="WHITE" offset="1.0" />
-               </stops>
-            </RadialGradient>
-         </ripplerFill>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUser" focusColor="WHITE" labelFloat="true" layoutX="813.0" layoutY="426.0" prefHeight="44.0" prefWidth="407.0" promptText="UserName" style="-fx-background-color: FFFFFF;" unFocusColor="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="814.0" layoutY="573.0" onAction="#OnActionLogin" prefHeight="45.0" prefWidth="418.0" ripplerFill="#a0395c" style="-fx-background-color: #810a44; -fx-background-insets: 000000;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style" size="24.0" />
+         </font>
       </JFXButton>
+      <Label layoutX="887.0" layoutY="337.0" text="Login to your site" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblforgot" layoutX="947.0" layoutY="647.0" text="Forgot Password?" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="716.0" layoutY="116.0" prefHeight="55.0" prefWidth="636.0" text="Cherry Clothing Login Form">
+         <font>
+            <Font name="Arial" size="48.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#ffffffa0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
    </children>
 </AnchorPane>
